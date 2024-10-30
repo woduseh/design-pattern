@@ -1,21 +1,21 @@
 package org.example.design.pattern.factory.simplefactory;
 
-import org.example.design.pattern.factory.pizza.simple.CheesePizza;
-import org.example.design.pattern.factory.pizza.simple.ClamPizza;
-import org.example.design.pattern.factory.pizza.simple.PepperoniPizza;
-import org.example.design.pattern.factory.pizza.Pizza;
+import org.example.design.pattern.factory.pizza.simple.CheeseOldPizza;
+import org.example.design.pattern.factory.pizza.simple.ClamOldPizza;
+import org.example.design.pattern.factory.pizza.simple.PepperoniOldPizza;
+import org.example.design.pattern.factory.pizza.OldPizza;
 import org.example.design.pattern.factory.pizza.PizzaType;
-import org.example.design.pattern.factory.pizza.simple.VeggiePizza;
+import org.example.design.pattern.factory.pizza.simple.VeggieOldPizza;
 
 public class SimplePizzaFactory {
 	private SimplePizzaFactory() {}
 
-	public static Pizza createPizza(PizzaType type) {
+	public static OldPizza createPizza(PizzaType type) {
 		return switch (type) {
-			case CHEESE -> new CheesePizza();
-			case PEPPERONI -> new PepperoniPizza();
-			case CLAM -> new ClamPizza();
-			case VEGGIE -> new VeggiePizza();
+			case CHEESE -> new CheeseOldPizza();
+			case PEPPERONI -> new PepperoniOldPizza();
+			case CLAM -> new ClamOldPizza();
+			case VEGGIE -> new VeggieOldPizza();
 		};
 	}
 }

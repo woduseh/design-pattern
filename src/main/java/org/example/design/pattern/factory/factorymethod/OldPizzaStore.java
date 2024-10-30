@@ -1,11 +1,11 @@
-package org.example.design.pattern.factory.simplefactory;
+package org.example.design.pattern.factory.factorymethod;
 
 import org.example.design.pattern.factory.pizza.OldPizza;
 import org.example.design.pattern.factory.pizza.PizzaType;
 
-public class SimplePizzaStore {
+public abstract class OldPizzaStore {
 	public OldPizza orderPizza(PizzaType type) {
-		OldPizza oldPizza = SimplePizzaFactory.createPizza(type);
+		OldPizza oldPizza = createPizza(type);
 
 		oldPizza.prepare();
 		oldPizza.bake();
@@ -14,4 +14,6 @@ public class SimplePizzaStore {
 
 		return oldPizza;
 	}
+
+	abstract OldPizza createPizza(PizzaType type);
 }

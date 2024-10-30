@@ -1,22 +1,21 @@
 package org.example.design.pattern.factory.factorymethod;
 
-import org.example.design.pattern.factory.pizza.Pizza;
+import org.example.design.pattern.factory.pizza.OldPizza;
 import org.example.design.pattern.factory.pizza.PizzaType;
-import org.example.design.pattern.factory.simplefactory.SimplePizzaStore;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Main {
 	public static void main(String[] args) {
-		PizzaStore nyPizzaStore = new NewYorkPizzaStore();
-		PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
+		OldPizzaStore nyOldPizzaStore = new NewYorkOldPizzaStore();
+		OldPizzaStore chicagoOldPizzaStore = new ChicagoOldPizzaStore();
 
-		Pizza newYorkCheesePizza = nyPizzaStore.orderPizza(PizzaType.CHEESE);
+		OldPizza newYorkCheeseOldPizza = nyOldPizzaStore.orderPizza(PizzaType.CHEESE);
 
-		Pizza chicagoPepperoniPizza = chicagoPizzaStore.orderPizza(PizzaType.PEPPERONI);
+		OldPizza chicagoPepperoniOldPizza = chicagoOldPizzaStore.orderPizza(PizzaType.PEPPERONI);
 
-		log.info("Order From Ethan: {}", newYorkCheesePizza);
-		log.info("Order From Joel: {}", chicagoPepperoniPizza);
+		log.info("Order From Ethan: {}", newYorkCheeseOldPizza);
+		log.info("Order From Joel: {}", chicagoPepperoniOldPizza);
 	}
 }
