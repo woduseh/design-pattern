@@ -1,3 +1,3 @@
 package org.example.design.pattern.factory.abstractfactory.ingredient.cheese;
 
-public class MozzarellaCheese extends Cheese { }
+public class MozzarellaCheese implements Cheese { }

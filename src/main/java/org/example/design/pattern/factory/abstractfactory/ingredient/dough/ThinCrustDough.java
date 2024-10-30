@@ -1,3 +1,3 @@
 package org.example.design.pattern.factory.abstractfactory.ingredient.dough;
 
-public class ThinCrustDough extends Dough { }
+public class ThinCrustDough implements Dough { }

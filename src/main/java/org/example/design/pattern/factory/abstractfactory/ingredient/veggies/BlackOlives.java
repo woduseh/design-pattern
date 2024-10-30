@@ -1,3 +1,3 @@
 package org.example.design.pattern.factory.abstractfactory.ingredient.veggies;
 
-public class BlackOlives extends Veggies { }
+public class BlackOlives implements Veggies { }
