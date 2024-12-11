@@ -19,7 +19,6 @@
   - JSON 형태로만 데이터를 다룰 수 있는 라이브러리가 있음
   - 그런데, 데이터는 모두 XML 형태로만 제공됨
   - JSON 라이브러리를 사용하려면 XML 데이터를 JSON 데이터로 변환해야 함
-- 실제 예) umon-service-communicator? <- 이 부분은 확인 후 수정...
 
 ### 해결 방안
 ![어뎁터를 도입한다!](xml-json-adapter.png)
